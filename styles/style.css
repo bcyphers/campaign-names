@@ -1,0 +1,93 @@
+
+body {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin-bottom: 8px;
+  margin-top: 20px;
+}
+
+#container {
+  padding-top:20px;
+  width: 980px;
+}
+
+header {
+  padding: 10px;
+}
+
+#text-select {
+  float:right;
+  margin-right: 10px;
+}
+
+.vis {
+  position: relative;
+}
+
+#status {
+  padding:0 0 20px 20px;
+}
+
+#controls {
+  padding: 20px;
+  background-color: #eee;
+  margin: 10px;
+  width: 350px;
+}
+
+#bubble-background {
+  fill: none;
+  pointer-events: all;
+}
+
+.trump .bubble-node {
+  fill: #d94040;
+}
+
+.trump .bubble-hover {
+  fill: #db977f;
+}
+
+.hillary .bubble-node {
+  fill: #5a8fc3;
+}
+
+.hillary .bubble-hover {
+  fill: #a1bfdd;
+}
+
+.bubble-selected {
+  fill: lightgray;
+  stroke: #041E42;
+  stroke-width: 1.5px;
+}
+
+.active {
+  color: lightgray
+}
+
+a.bubble-label {
+  color: inherit;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1em;
+  position: absolute;
+}
+
+
+.bubble-label .bubble-label-value {
+  font: 11px;
+  white-space: nowrap;
+}
+
+footer p {
+  text-align: center;
+  padding-top:20px;
+  padding-bottom:20px;
+  font: 13px;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- taken from url=(0049)https://tompiona.github.io/lex_lebron/index.html# -->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en"><script type="text/javascript">window["_gaUserPrefs"] = { ioo : function() { return true; } }</script><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Dispatches from the Meme War</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link rel="stylesheet" href="./styles/reset.css">
+  <link rel="stylesheet" href="./styles/bootstrap.min.css">
+  <link rel="stylesheet" href="./styles/style.css">
+
+  <script src="./scripts/modernizr-2.0.6.min.js"></script>
+  <style>
+    li {
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="container" class="container">
+    <header>
+    <h1>Dispatches from the Meme War</h1>
+    <h3>Most common nicknames for Hillary Clinton in comments on conservative-leaning news sites during the 2016 election cycle</h3>
+    <em>"Hillary" occurred 2,565,207 times in 1.25 billion tokens</em>
+    <div id="main-hillary" role="main">
+      <div id="vis-hillary" class="vis hillary">
+      </div>
+    </div>
+
+    <h3>Most common nicknames for Donald Trump in comments on liberal-leaning news sites</h3>
+    <em>"Trump" occurred 2,389,829 times in 490 million tokens</em>
+    <div id="main-trump" role="main">
+      <div id="vis-trump" class="vis trump">
+      </div>
+    </div>
+
+    <h3>Methodology</h3>
+    <p>All data comes from comments made on news sites using Disqus between January 20, 2016, and January 20, 2017.
+      "Conservative" and "liberal" sites were identified using <a href="https://allsides.com">Allsides</a>.</p>
+    <p>Specifically, the conservative sites used were Breitbart, Infowars, The Washington Times, Newsbusters, Newsmax, The Gateway Pundit, Frontpage Mag, American Thinker, CNS News, TownHall.com, The Daily Caller, and The Federalist.</p>
+    <p>The liberal sites were Media Matters, Mother Jones, The Atlantic, Rolling Stone, The Salt Lake Tribune, CBS News, RawStory, and TruthOut.</p>
+    <p>Data was gathered over the course of many weeks using Disqus's <a href="https://disqus.com/api">free api</a>.</p>
+    <p>I had much more data from conservative sites than liberal ones -- in total, 490 million word tokens from the left, and 1.25 billion from the right.
+      Breitbart was, by far, the biggest data source, with 695 million comments on its own.</p>
+    <p>To identify nicknames, I trained a Word2Vec model on the corpus of comments from each side.
+      I found all words in each corpus with a cosine-similarity score of at least 0.5 with "hillary" and "trump", respectively, and over 100 occurrences.
+      I then manually filtered out adjectives, verbs, words that clearly referred to someone else (like Obama or Bernie), and boring words like "clinton" and "president."
+      I did not filter out typos.</p>
+
+    <h3>Observations</h3>
+    <ul>
+      <li>Although "Drumpf" was the most common pejorative token overall, combining "killary" and "killery" or "hitlery" and "hitlary" would give either one of those the lead. The right definitely wins in the "nicknames per use of real name" department.</li>
+      <li>The right also takes the typo crown: "hillery" and "hilary" combined almost eclipse total uses of "drumpf."</li>
+      <li>"hrc" is much more popular than "djt"</li>
+      <li>I had not heard "peeotus" before now, and I'm sad I missed the chance to use it.</li>
+      <li>"Shitgibbon"</li>
+    </ul>
+
+    <h4 style='margin-top: 20px;'>This was inspired by, and the code almost entirely stolen from, the <a href="https://tompiona.github.io/lex_lebron/index.html">LeXicon of LeBron</a>.</h4>
+
+  </header></div> <!--! end of #container -->
+
+  <script>window.jQuery || document.write('<script src="./scripts/jquery-1.7.2.min.js"><\/script>')</script>
+
+  <script defer="" src="./scripts/plugins.js"></script>
+  <script src="./scripts/coffee-script.js"></script>
+  <script src="./scripts/d3.min.js"></script>
+  <script type="text/coffeescript" src="./scripts/vis.coffee"></script>
+  <script type="text/javascript">
+  </script>
+
+</body></html>
