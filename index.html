@@ -46,9 +46,10 @@
       "Conservative" and "liberal" sites were identified using <a href="https://allsides.com">Allsides</a>.</p>
     <p>Specifically, the conservative sites used were Breitbart, Infowars, The Washington Times, Newsbusters, Newsmax, The Gateway Pundit, Frontpage Mag, American Thinker, CNS News, TownHall.com, The Daily Caller, and The Federalist.</p>
     <p>The liberal sites were Media Matters, Mother Jones, The Atlantic, Rolling Stone, The Salt Lake Tribune, CBS News, RawStory, and TruthOut.</p>
-    <p>Data was gathered over the course of many weeks using Disqus's <a href="https://disqus.com/api">free api</a>.</p>
+    <p>Data was gathered over the course of many weeks using Disqus's <a
+      href="https://disqus.com/api">free api</a>. In total, there were about 75 million comments with an average of 28 tokens each.</p>
     <p>I had much more data from conservative sites than liberal ones -- in total, 490 million word tokens from the left, and 1.25 billion from the right.
-      Breitbart was, by far, the biggest data source, with 695 million comments on its own.</p>
+      Breitbart was, by far, the biggest data source, with 695 million tokens on its own.</p>
     <p>To identify nicknames, I trained a Word2Vec model on the corpus of comments from each side.
       I found all words in each corpus with a cosine-similarity score of at least 0.5 with "hillary" and "trump", respectively, and over 100 occurrences.
       I then manually filtered out adjectives, verbs, words that clearly referred to someone else (like Obama or Bernie), and boring words like "clinton" and "president."
